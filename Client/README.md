@@ -1,2 +1,2 @@
-# Messenger_for_fun
-education
+# Client part of the project
+
