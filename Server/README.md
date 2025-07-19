@@ -1,2 +1,1 @@
-# Messenger_for_fun
-education
+# Server part of the project
