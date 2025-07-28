@@ -5,10 +5,9 @@ import java.sql.Statement;
 
 class CreateTableExample {
     public static void main(String[] args) {
-        // URL для подключения к БД (пример для MySQL)
-        String url = "jdbc:mysql://localhost:3306/mydatabase";
-        String username = "root";
-        String password = "password";
+        String url = "jdbc:mysql://localhost:3306/MYSQL";
+        String username = "SnrMazega";
+        String password = "WTF1243";
 
         try (Connection connection = DriverManager.getConnection(url, username, password)) {
             System.out.println("Подключение успешно!");
@@ -33,6 +32,10 @@ class CreateTableExample {
         try (Statement statement = connection.createStatement()) {
             statement.execute(sql);
             System.out.println("Таблица успешно создана!");
+            String insertSQL = "INSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com')";
+            int rowsAffected = statement.executeUpdate(insertSQL);
+            System.out.println("Добавлено строк: " + rowsAffected);
         }
     }
+    private static void
 }
